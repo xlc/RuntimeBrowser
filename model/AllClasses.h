@@ -43,9 +43,9 @@
 	NSMutableDictionary *allClassStubsByImagePath;
 }
 
-@property (nonatomic, retain) NSMutableArray *rootClasses;
-@property (nonatomic, retain) NSMutableDictionary *allClassStubsByName;
-@property (nonatomic, retain) NSMutableDictionary *allClassStubsByImagePath;
+@property (nonatomic, strong) NSMutableArray *rootClasses;
+@property (nonatomic, strong) NSMutableDictionary *allClassStubsByName;
+@property (nonatomic, strong) NSMutableDictionary *allClassStubsByImagePath;
 
 + (AllClasses *)sharedInstance;
 

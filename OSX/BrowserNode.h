@@ -13,8 +13,8 @@
 	NSArray *children;
 }
 
-@property (nonatomic, retain) NSString *nodeName;
-@property (nonatomic, retain) NSArray *children;
+@property (nonatomic, strong) NSString *nodeName;
+@property (nonatomic, strong) NSArray *children;
 
 + (BrowserNode *)rootNodeImages;
 + (BrowserNode *)rootNodeList;

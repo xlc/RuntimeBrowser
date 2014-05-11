@@ -70,16 +70,6 @@
 	return self;
 }
 
-- (void)dealloc {
-	//[openDir release];
-	[saveDirURL release];
-	[keywords release];
-    [searchResultsNode release];
-	[mainWindow release];
-    [searchResults release];
-    [searchQueue release];
-	[super dealloc];
-}
 
 - (BOOL)saveAsHeaderIsEnabled {
 	id item = [classBrowser itemAtIndexPath:[classBrowser selectionIndexPath]];
@@ -250,7 +240,6 @@
             //                   [[NSProcessInfo processInfo] enableAutomaticTermination:@"did finish writing files"];
             //               }
             
-            [classNames release];
             
             NSString *message = [NSString stringWithFormat:@"Done saving all classes into %@. \n  %lu classes saved. \n  %d classes failed to save.", [dirURL path], (unsigned long)saved, failed];
             
@@ -259,7 +248,6 @@
             }];
             
         }];
-        [queue release];
         
     }
 	 ];
@@ -345,13 +333,13 @@
     
     self.searchResults = [NSMutableArray array];
     
-    self.searchResultsNode = [[[BrowserNode alloc] init] autorelease];
+    self.searchResultsNode = [[BrowserNode alloc] init];
 	
-    NSString *searchString = [[[searchField stringValue] copy] autorelease];
+    NSString *searchString = [[searchField stringValue] copy];
     
     NSArray *classStubs = [[AllClasses sharedInstance] sortedClassStubs];
     
-    self.searchQueue = [[[NSOperationQueue alloc] init] autorelease];
+    self.searchQueue = [[NSOperationQueue alloc] init];
     
     //    NSUInteger maxConcurrentOperationCount = [[NSProcessInfo processInfo] processorCount] + 1;
     
@@ -413,7 +401,6 @@
     }];
     
     [searchQueue addOperation:op];
-    [op release];
     
     [segmentedControl setEnabled:!isInSearchMode forSegment:0];
     [segmentedControl setEnabled:!isInSearchMode forSegment:2];

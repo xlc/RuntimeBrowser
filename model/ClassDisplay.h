@@ -50,8 +50,8 @@ Boston, MA  02111-1307  USA
 	BOOL displayPropertiesDefaultValues;
 }
 
-@property (nonatomic, retain) NSMutableSet *refdClasses;
-@property (nonatomic, retain) NSMutableDictionary *namedStructs;
+@property (nonatomic, strong) NSMutableSet *refdClasses;
+@property (nonatomic, strong) NSMutableDictionary *namedStructs;
 @property BOOL displayPropertiesDefaultValues;
 
 + (ClassDisplay *)classDisplayWithClass:(Class)klass;

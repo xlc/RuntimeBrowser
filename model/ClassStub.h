@@ -48,8 +48,8 @@ The purpose of ClassStub is to have a way of accessing ALL of a class's currentl
     NSMutableArray *subclassesStubs;
 }
 
-@property (nonatomic, retain) NSString *stubClassname;
-@property (nonatomic, retain) NSMutableArray *subclassesStubs;
+@property (nonatomic, strong) NSString *stubClassname;
+@property (nonatomic, strong) NSMutableArray *subclassesStubs;
 
 + (ClassStub *)classStubWithClass:(Class)klass;
 

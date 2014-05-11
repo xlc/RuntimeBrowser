@@ -107,7 +107,7 @@ NSString *functionSignatureNote(BOOL showFunctionSignatureNote) {
 + (ClassDisplay *)classDisplayWithClass:(Class)klass {
 	ClassDisplay *cd = [[self alloc] init];
 	[cd setRepresentedClass:klass];
-	return [cd autorelease];
+	return cd;
 }
 
 - (void)setRepresentedClass:(Class)klass {
@@ -704,11 +704,6 @@ NSString *functionSignatureNote(BOOL showFunctionSignatureNote) {
 
 + (void)thisClassIsPartOfTheRuntimeBrowser {}
 
-- (void)dealloc {
-    [refdClasses release];
-    [namedStructs release];
-	[super dealloc];
-}
 
 - (NSString *)propertyDescription:(objc_property_t)p {
 	NSString *name = [NSString stringWithCString:property_getName(p) encoding:NSUTF8StringEncoding];
@@ -778,7 +773,6 @@ NSString *functionSignatureNote(BOOL showFunctionSignatureNote) {
 		NSString *attributes = [NSString stringWithFormat:@"(%@)", [at componentsJoinedByString:@","]];
 		[desc appendString:attributes];
 	}
-	[at release];
 	
 	[desc appendFormat:@" %@%@;", type, name];
 	
@@ -841,7 +835,7 @@ NSString *functionSignatureNote(BOOL showFunctionSignatureNote) {
         [header appendFormat: @": %s ", class_getName(class_getSuperclass(representedClass))];
 	
     // conforming to protocols
-    Protocol **protocolList = class_copyProtocolList(representedClass, &protocolListCount);
+    Protocol * __unsafe_unretained *protocolList = class_copyProtocolList(representedClass, &protocolListCount);
     if (protocolList != NULL && (protocolListCount > 0)) {
         [header appendString: @"<"];
         Protocol *rtProtocol = protocolList[0];

@@ -81,16 +81,16 @@ typedef enum {
     NSOperationQueue *searchQueue;
 }
 
-@property (nonatomic, retain) NSWindow *mainWindow;
+@property (nonatomic, strong) NSWindow *mainWindow;
 //@property (nonatomic, retain) NSString *openDir;
-@property (nonatomic, retain) NSURL *saveDirURL;
-@property (nonatomic, retain) NSArray *keywords;
-@property (nonatomic, retain) AllClasses *allClasses;
-@property (nonatomic, retain) NSArray *classes;
-@property (nonatomic, retain) NSSegmentedControl *segmentedControl;
-@property (nonatomic, retain) BrowserNode *searchResultsNode;
-@property (nonatomic, retain) NSMutableArray *searchResults;
-@property (nonatomic, retain) NSOperationQueue *searchQueue;
+@property (nonatomic, strong) NSURL *saveDirURL;
+@property (nonatomic, strong) NSArray *keywords;
+@property (nonatomic, strong) AllClasses *allClasses;
+@property (nonatomic, strong) NSArray *classes;
+@property (nonatomic, strong) NSSegmentedControl *segmentedControl;
+@property (nonatomic, strong) BrowserNode *searchResultsNode;
+@property (nonatomic, strong) NSMutableArray *searchResults;
+@property (nonatomic, strong) NSOperationQueue *searchQueue;
 
 - (IBAction)openAction:(id)sender;
 - (IBAction)saveAction:(id)sender;
