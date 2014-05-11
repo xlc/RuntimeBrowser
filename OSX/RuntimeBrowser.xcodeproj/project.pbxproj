@@ -19,6 +19,11 @@
 		0379BB80179D0B4000F4B8BF /* NSString+SyntaxColoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 0379BB7F179D0B4000F4B8BF /* NSString+SyntaxColoring.m */; };
 		0379BB86179D0BD200F4B8BF /* NSMutableAttributedString+RTB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0379BB85179D0BD200F4B8BF /* NSMutableAttributedString+RTB.m */; };
 		037EDADC1307102300298C79 /* ClassStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 037EDADB1307102300298C79 /* ClassStub.m */; };
+		06045D77191F999500034A3F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06045D25191F956C00034A3F /* CoreFoundation.framework */; };
+		06655AC4191F9F4A00F9BC40 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06655AC3191F9F4A00F9BC40 /* AppKit.framework */; };
+		06655AC6191F9F4E00F9BC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06655AC5191F9F4E00F9BC40 /* Foundation.framework */; };
+		06655AC7191F9F5300F9BC40 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06045D46191F992700034A3F /* Cocoa.framework */; };
+		06655AC8191F9FE300F9BC40 /* RuntimeBrowserPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 06045D39191F967500034A3F /* RuntimeBrowserPlugin.m */; };
 		5F3E071B13127B04001D2A1C /* class.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071713127B04001D2A1C /* class.tiff */; };
 		5F3E071C13127B04001D2A1C /* class2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071813127B04001D2A1C /* class2.tiff */; };
 		5F3E071D13127B04001D2A1C /* framework.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071913127B04001D2A1C /* framework.tiff */; };
@@ -48,6 +53,19 @@
 		0379BB85179D0BD200F4B8BF /* NSMutableAttributedString+RTB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+RTB.m"; sourceTree = "<group>"; };
 		037EDADA1307102300298C79 /* ClassStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassStub.h; sourceTree = "<group>"; };
 		037EDADB1307102300298C79 /* ClassStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassStub.m; sourceTree = "<group>"; };
+		06045D1F191F956C00034A3F /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		06045D21191F956C00034A3F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		06045D23191F956C00034A3F /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		06045D25191F956C00034A3F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		06045D29191F956C00034A3F /* RuntimeBrowserPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RuntimeBrowserPlugin-Info.plist"; sourceTree = "<group>"; };
+		06045D2B191F956C00034A3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		06045D33191F956C00034A3F /* RuntimeBrowserPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeBrowserPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		06045D38191F967500034A3F /* RuntimeBrowserPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeBrowserPlugin.h; sourceTree = "<group>"; };
+		06045D39191F967500034A3F /* RuntimeBrowserPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeBrowserPlugin.m; sourceTree = "<group>"; };
+		06045D46191F992700034A3F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		06045D73191F999500034A3F /* RuntimeBrowserPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeBrowserPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		06655AC3191F9F4A00F9BC40 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		06655AC5191F9F4E00F9BC40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,6 +83,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		06045D6E191F999500034A3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06655AC7191F9F5300F9BC40 /* Cocoa.framework in Frameworks */,
+				06655AC6191F9F4E00F9BC40 /* Foundation.framework in Frameworks */,
+				06655AC4191F9F4A00F9BC40 /* AppKit.framework in Frameworks */,
+				06045D77191F999500034A3F /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,6 +131,26 @@
 			path = ../UI;
 			sourceTree = "<group>";
 		};
+		06045D27191F956C00034A3F /* RuntimeBrowserPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				06045D38191F967500034A3F /* RuntimeBrowserPlugin.h */,
+				06045D39191F967500034A3F /* RuntimeBrowserPlugin.m */,
+				06045D28191F956C00034A3F /* Supporting Files */,
+			);
+			path = RuntimeBrowserPlugin;
+			sourceTree = "<group>";
+		};
+		06045D28191F956C00034A3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06045D29191F956C00034A3F /* RuntimeBrowserPlugin-Info.plist */,
+				06045D2A191F956C00034A3F /* InfoPlist.strings */,
+				06045D33191F956C00034A3F /* RuntimeBrowserPlugin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* RuntimeBrowser.app */,
+				06045D73191F999500034A3F /* RuntimeBrowserPlugin.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +198,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				06045D27191F956C00034A3F /* RuntimeBrowserPlugin */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -184,7 +235,14 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06655AC5191F9F4E00F9BC40 /* Foundation.framework */,
+				06655AC3191F9F4A00F9BC40 /* AppKit.framework */,
+				06045D46191F992700034A3F /* Cocoa.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				06045D1F191F956C00034A3F /* QuickLook.framework */,
+				06045D21191F956C00034A3F /* ApplicationServices.framework */,
+				06045D23191F956C00034A3F /* CoreServices.framework */,
+				06045D25191F956C00034A3F /* CoreFoundation.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -193,6 +251,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		06045D72191F999500034A3F /* RuntimeBrowserPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06045D85191F999500034A3F /* Build configuration list for PBXNativeTarget "RuntimeBrowserPlugin" */;
+			buildPhases = (
+				06045D6D191F999500034A3F /* Sources */,
+				06045D6E191F999500034A3F /* Frameworks */,
+				06045D70191F999500034A3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuntimeBrowserPlugin;
+			productName = RuntimeBrowserPlugin;
+			productReference = 06045D73191F999500034A3F /* RuntimeBrowserPlugin.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8D1107260486CEB800E47090 /* RuntimeBrowser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B73648660E3FCD540053523F /* Build configuration list for PBXNativeTarget "RuntimeBrowser" */;
@@ -217,6 +292,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = B736486A0E3FCD540053523F /* Build configuration list for PBXProject "RuntimeBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -227,17 +303,26 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* RuntimeBrowser */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* RuntimeBrowser */,
+				06045D72191F999500034A3F /* RuntimeBrowserPlugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		06045D70191F999500034A3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +342,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		06045D6D191F999500034A3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06655AC8191F9FE300F9BC40 /* RuntimeBrowserPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,6 +377,14 @@
 			name = RuntimeBrowser.nib;
 			sourceTree = "<group>";
 		};
+		06045D2A191F956C00034A3F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06045D2B191F956C00034A3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,13 +396,124 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		06045D86191F999500034A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		06045D87191F999500034A3F /* Debug COVERAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = "Debug COVERAGE";
+		};
+		06045D88191F999500034A3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
 		5FC5A6B81327D86B0097CC0D /* Debug COVERAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DDEBUG";
@@ -318,8 +530,8 @@
 		5FC5A6B91327D86B0097CC0D /* Debug COVERAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Nicolas Seriot";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -342,7 +554,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = RuntimeBrowser;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -351,8 +563,8 @@
 		B73648670E3FCD540053523F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Nicolas Seriot";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -371,7 +583,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = RuntimeBrowser;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -380,8 +592,8 @@
 		B73648680E3FCD540053523F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Nicolas Seriot";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -395,7 +607,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = RuntimeBrowser;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -404,8 +616,17 @@
 		B736486B0E3FCD540053523F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DDEBUG";
@@ -421,9 +642,18 @@
 		B736486C0E3FCD540053523F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
@@ -438,6 +668,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		06045D85191F999500034A3F /* Build configuration list for PBXNativeTarget "RuntimeBrowserPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06045D86191F999500034A3F /* Debug */,
+				06045D87191F999500034A3F /* Debug COVERAGE */,
+				06045D88191F999500034A3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		B73648660E3FCD540053523F /* Build configuration list for PBXNativeTarget "RuntimeBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
