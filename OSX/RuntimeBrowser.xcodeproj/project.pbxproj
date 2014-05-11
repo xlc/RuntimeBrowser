@@ -24,6 +24,23 @@
 		06655AC6191F9F4E00F9BC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06655AC5191F9F4E00F9BC40 /* Foundation.framework */; };
 		06655AC7191F9F5300F9BC40 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06045D46191F992700034A3F /* Cocoa.framework */; };
 		06655AC8191F9FE300F9BC40 /* RuntimeBrowserPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 06045D39191F967500034A3F /* RuntimeBrowserPlugin.m */; };
+		06924D87191FA031008790DE /* AllClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 030706D1130FCAD2009E6B08 /* AllClasses.m */; };
+		06924D88191FA031008790DE /* ClassStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 037EDADB1307102300298C79 /* ClassStub.m */; };
+		06924D89191FA031008790DE /* ClassDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 030F16C912DFA4CB000180B1 /* ClassDisplay.m */; };
+		06924D8A191FA031008790DE /* NSString+SyntaxColoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 0379BB7F179D0B4000F4B8BF /* NSString+SyntaxColoring.m */; };
+		06924D8B191FA031008790DE /* NSMutableAttributedString+RTB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0379BB85179D0BD200F4B8BF /* NSMutableAttributedString+RTB.m */; };
+		06924D8C191FA031008790DE /* BrowserNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 033148A2131157A200695BB1 /* BrowserNode.m */; };
+		06924D8D191FA031008790DE /* BrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03314FCC131251A500695BB1 /* BrowserCell.m */; };
+		06924D8E191FA031008790DE /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73648730E3FCD710053523F /* AppController.m */; };
+		06924D8F191FA03C008790DE /* class.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071713127B04001D2A1C /* class.tiff */; };
+		06924D90191FA03C008790DE /* class2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071813127B04001D2A1C /* class2.tiff */; };
+		06924D91191FA03C008790DE /* framework.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071913127B04001D2A1C /* framework.tiff */; };
+		06924D92191FA03C008790DE /* h.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071A13127B04001D2A1C /* h.tiff */; };
+		06924D93191FA03C008790DE /* RuntimeBrowser.nib in Resources */ = {isa = PBXBuildFile; fileRef = 033878E513070ABF003AF5CE /* RuntimeBrowser.nib */; };
+		06924D94191FA03C008790DE /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 03561DB30E4BA18A002FEBCD /* Credits.html */; };
+		06924D95191FA03C008790DE /* RuntimeBrowser.icns in Resources */ = {isa = PBXBuildFile; fileRef = 03338589131D9738002654D3 /* RuntimeBrowser.icns */; };
+		06924D97191FA03C008790DE /* Keywords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0315C0310E47AB9F00DFB2F3 /* Keywords.plist */; };
+		06924D98191FA03C008790DE /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0315C2770E47D3A200DFB2F3 /* Defaults.plist */; };
 		5F3E071B13127B04001D2A1C /* class.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071713127B04001D2A1C /* class.tiff */; };
 		5F3E071C13127B04001D2A1C /* class2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071813127B04001D2A1C /* class2.tiff */; };
 		5F3E071D13127B04001D2A1C /* framework.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071913127B04001D2A1C /* framework.tiff */; };
@@ -320,6 +337,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06924D8F191FA03C008790DE /* class.tiff in Resources */,
+				06924D90191FA03C008790DE /* class2.tiff in Resources */,
+				06924D91191FA03C008790DE /* framework.tiff in Resources */,
+				06924D92191FA03C008790DE /* h.tiff in Resources */,
+				06924D93191FA03C008790DE /* RuntimeBrowser.nib in Resources */,
+				06924D94191FA03C008790DE /* Credits.html in Resources */,
+				06924D95191FA03C008790DE /* RuntimeBrowser.icns in Resources */,
+				06924D97191FA03C008790DE /* Keywords.plist in Resources */,
+				06924D98191FA03C008790DE /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06924D87191FA031008790DE /* AllClasses.m in Sources */,
+				06924D88191FA031008790DE /* ClassStub.m in Sources */,
+				06924D89191FA031008790DE /* ClassDisplay.m in Sources */,
+				06924D8A191FA031008790DE /* NSString+SyntaxColoring.m in Sources */,
+				06924D8B191FA031008790DE /* NSMutableAttributedString+RTB.m in Sources */,
+				06924D8C191FA031008790DE /* BrowserNode.m in Sources */,
+				06924D8D191FA031008790DE /* BrowserCell.m in Sources */,
+				06924D8E191FA031008790DE /* AppController.m in Sources */,
 				06655AC8191F9FE300F9BC40 /* RuntimeBrowserPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +564,7 @@
 		5FC5A6B91327D86B0097CC0D /* Debug COVERAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -546,7 +581,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-lgcov",
 					"-licucore",
@@ -563,6 +598,7 @@
 		B73648670E3FCD540053523F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -578,7 +614,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = "-licucore";
 				PREBINDING = NO;
 				PRODUCT_NAME = RuntimeBrowser;
@@ -592,6 +628,7 @@
 		B73648680E3FCD540053523F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -603,7 +640,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = RuntimeBrowser;
 				PROVISIONING_PROFILE = "";
