@@ -36,11 +36,11 @@
 		06924D90191FA03C008790DE /* class2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071813127B04001D2A1C /* class2.tiff */; };
 		06924D91191FA03C008790DE /* framework.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071913127B04001D2A1C /* framework.tiff */; };
 		06924D92191FA03C008790DE /* h.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071A13127B04001D2A1C /* h.tiff */; };
-		06924D93191FA03C008790DE /* RuntimeBrowser.nib in Resources */ = {isa = PBXBuildFile; fileRef = 033878E513070ABF003AF5CE /* RuntimeBrowser.nib */; };
 		06924D94191FA03C008790DE /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 03561DB30E4BA18A002FEBCD /* Credits.html */; };
 		06924D95191FA03C008790DE /* RuntimeBrowser.icns in Resources */ = {isa = PBXBuildFile; fileRef = 03338589131D9738002654D3 /* RuntimeBrowser.icns */; };
 		06924D97191FA03C008790DE /* Keywords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0315C0310E47AB9F00DFB2F3 /* Keywords.plist */; };
 		06924D98191FA03C008790DE /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0315C2770E47D3A200DFB2F3 /* Defaults.plist */; };
+		06FCB3581920B98F0057845B /* RuntimeBrowserPlugin.nib in Resources */ = {isa = PBXBuildFile; fileRef = 06FCB3561920B98F0057845B /* RuntimeBrowserPlugin.nib */; };
 		5F3E071B13127B04001D2A1C /* class.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071713127B04001D2A1C /* class.tiff */; };
 		5F3E071C13127B04001D2A1C /* class2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071813127B04001D2A1C /* class2.tiff */; };
 		5F3E071D13127B04001D2A1C /* framework.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F3E071913127B04001D2A1C /* framework.tiff */; };
@@ -83,6 +83,7 @@
 		06045D73191F999500034A3F /* RuntimeBrowserPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeBrowserPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		06655AC3191F9F4A00F9BC40 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		06655AC5191F9F4E00F9BC40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		06FCB3571920B98F0057845B /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/RuntimeBrowserPlugin.nib; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -239,6 +240,7 @@
 				5F3E071913127B04001D2A1C /* framework.tiff */,
 				5F3E071A13127B04001D2A1C /* h.tiff */,
 				033878E513070ABF003AF5CE /* RuntimeBrowser.nib */,
+				06FCB3561920B98F0057845B /* RuntimeBrowserPlugin.nib */,
 				03561DB30E4BA18A002FEBCD /* Credits.html */,
 				03338589131D9738002654D3 /* RuntimeBrowser.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -341,7 +343,7 @@
 				06924D90191FA03C008790DE /* class2.tiff in Resources */,
 				06924D91191FA03C008790DE /* framework.tiff in Resources */,
 				06924D92191FA03C008790DE /* h.tiff in Resources */,
-				06924D93191FA03C008790DE /* RuntimeBrowser.nib in Resources */,
+				06FCB3581920B98F0057845B /* RuntimeBrowserPlugin.nib in Resources */,
 				06924D94191FA03C008790DE /* Credits.html in Resources */,
 				06924D95191FA03C008790DE /* RuntimeBrowser.icns in Resources */,
 				06924D97191FA03C008790DE /* Keywords.plist in Resources */,
@@ -417,6 +419,14 @@
 				06045D2B191F956C00034A3F /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		06FCB3561920B98F0057845B /* RuntimeBrowserPlugin.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06FCB3571920B98F0057845B /* English */,
+			);
+			name = RuntimeBrowserPlugin.nib;
 			sourceTree = "<group>";
 		};
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {

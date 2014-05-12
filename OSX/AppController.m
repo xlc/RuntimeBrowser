@@ -106,7 +106,7 @@
 		[label setStringValue:@"Select a Class"];
 		[headerTextView setString:@""];
 		
-		RBBrowserViewType viewType = [[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
+		RBBrowserViewType viewType = (RBBrowserViewType)[[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
 		if(viewType == RBBrowserViewTypeImages) {
 			NSString *rootTitle = [NSString stringWithFormat:@"%lu images", (unsigned long)[[allClasses allClassStubsByImagePath] count]];
 			[classBrowser setTitle:rootTitle ofColumn:0];
@@ -181,8 +181,7 @@
 		if (success) {
 			self.saveDirURL = [fileURL URLByDeletingLastPathComponent];
 		} else {
-			NSString *message = [NSString stringWithFormat:@"Please try again, perhaps selecting a different file/directory. Error: %@", error];
-			NSRunAlertPanel(@"Save Failed :( !", message, @"OK", nil, nil);
+			NSRunAlertPanel(@"Save Failed :( !", @"Please try again, perhaps selecting a different file/directory. Error: %@", @"OK", nil, nil, error);
 		}
 	}];
 }
@@ -241,10 +240,8 @@
             //               }
             
             
-            NSString *message = [NSString stringWithFormat:@"Done saving all classes into %@. \n  %lu classes saved. \n  %d classes failed to save.", [dirURL path], (unsigned long)saved, failed];
-            
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                NSRunInformationalAlertPanel(@"Save All Finished", message, @"OK", nil, nil);
+                NSRunInformationalAlertPanel(@"Save All Finished", @"Done saving all classes into %@. \n  %lu classes saved. \n  %lu classes failed to save.", @"OK", nil, nil, [dirURL path], (unsigned long)saved, (unsigned long)failed);
             }];
             
         }];
@@ -260,7 +257,7 @@
 }
 
 - (BOOL)shouldShowDisclosureIndicatorOnClasses {
-	RBBrowserViewType viewType = [[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
+	RBBrowserViewType viewType = (RBBrowserViewType)[[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
 	return viewType == RBBrowserViewTypeTree;
 }
 
@@ -302,14 +299,14 @@
 }
 
 - (IBAction)changeViewTypeFromSegmentedControl:(NSSegmentedControl *)sender {
-    RBBrowserViewType viewType = sender.selectedSegment;
+    RBBrowserViewType viewType = (RBBrowserViewType)sender.selectedSegment;
     if(viewType != RBBrowserViewTypeList) [searchField setStringValue:@""];
     
-	[self changeViewTypeTo:sender.selectedSegment];
+	[self changeViewTypeTo:viewType];
 }
 
 - (IBAction)changeViewTypeFromMenuItem:(NSMenuItem *)sender {
-    RBBrowserViewType viewType = [sender tag];
+    RBBrowserViewType viewType = (RBBrowserViewType)[sender tag];
 	
     if([self isInSearchMode]) {
         if(viewType != RBBrowserViewTypeList) [searchField setStringValue:@""];
@@ -317,7 +314,7 @@
         [segmentedControl setEnabled:YES forSegment:2];
     }
 	
-	[self changeViewTypeTo:[sender tag]];
+	[self changeViewTypeTo:viewType];
 }
 
 - (IBAction)search:(id)sender {
@@ -349,9 +346,10 @@
     
     for (id classStub in classStubs) {
         
+        __weak NSBlockOperation *weakOp = op;
         [op addExecutionBlock:^{
 
-            if([op isCancelled]) {
+            if([weakOp isCancelled]) {
                 //NSLog(@"-- op isCancelled");
                 return;
             }
@@ -364,7 +362,7 @@
                     
                     if([searchString isEqualToString:[searchField stringValue]] == NO) {
                         //rNSLog(@"-- discard results for %@", searchString);
-                        [op cancel];
+                        [weakOp cancel];
                         return;
                     }
                     
@@ -469,7 +467,9 @@
 #pragma mark -
 
 - (void)windowWillClose:(NSNotification *)notification {
-	[NSApp terminate:self];
+    if (!self.isPlugin) {
+        [NSApp terminate:self];
+    }
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
@@ -507,7 +507,7 @@
 	
     [headerTextView setFont:[NSFont userFixedPitchFontOfSize:11.0]]; // TODO -- make size and font a default
     
-	RBBrowserViewType viewType = [[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
+	RBBrowserViewType viewType = (RBBrowserViewType)[[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
 	[self changeViewTypeTo:viewType];
 }
 
@@ -585,7 +585,7 @@
 #pragma mark NSBrowserDelegate
 
 - (BrowserNode *)rootItemForBrowser:(NSBrowser *)browser {
-	RBBrowserViewType viewType = [[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
+	RBBrowserViewType viewType = (RBBrowserViewType)[[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
 	
 	NSString *searchString = [searchField stringValue];
 	if([searchString length] > 0) {
@@ -607,7 +607,7 @@
 }
 
 - (BOOL)browser:(NSBrowser *)browser isLeafItem:(id)item {
-	RBBrowserViewType viewType = [[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
+	RBBrowserViewType viewType = (RBBrowserViewType)[[NSUserDefaults standardUserDefaults] integerForKey:@"ViewType"];
 	
     if(viewType == RBBrowserViewTypeList) return YES;
     if(viewType == RBBrowserViewTypeTree) return [[item children] count] == 0;
@@ -729,6 +729,11 @@
 	}
 	
 	return nil;	
+}
+
+- (BOOL)isPlugin
+{
+    return [NSApp delegate] != self;
 }
 
 @end
