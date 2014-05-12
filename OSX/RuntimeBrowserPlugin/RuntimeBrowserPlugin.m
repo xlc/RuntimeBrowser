@@ -7,6 +7,7 @@
 //
 
 #import "RuntimeBrowserPlugin.h"
+#import "AppController.h"
 
 @implementation RuntimeBrowserPlugin
 
@@ -32,6 +33,12 @@
 {
     self = [super init];
     if (self) {
+        NSArray *arr;
+        id delegate = [NSApplication sharedApplication].delegate;
+        AppController *controller = [[AppController alloc] init];
+        [[NSBundle bundleForClass:[self class]] loadNibNamed:@"RuntimeBrowser" owner:controller topLevelObjects:&arr];
+        [NSApplication sharedApplication].delegate = delegate;
+        [controller.mainWindow makeMainWindow];
         
     }
     return self;
