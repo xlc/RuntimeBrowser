@@ -131,7 +131,6 @@
                             </segmentedCell>
                             <connections>
                                 <action selector="changeViewTypeFromSegmentedControl:" target="137" id="328"/>
-                                <binding destination="210" name="selectedIndex" keyPath="values.ViewType" id="305"/>
                             </connections>
                         </segmentedControl>
                     </toolbarItem>
@@ -176,11 +175,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="260"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="213">
-                                <connections>
-                                    <action selector="makeKeyAndOrderFront:" target="202" id="214"/>
-                                </connections>
-                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="213"/>
                             <menuItem isSeparatorItem="YES" id="191"/>
                             <menuItem title="Hide RuntimeBrowser" keyEquivalent="h" id="256">
                                 <connections>
@@ -639,41 +634,6 @@
                 <outlet property="segmentedControl" destination="289" id="339"/>
             </connections>
         </customObject>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="202" userLabel="Panel (Preferences)" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="436" width="265" height="74"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
-            <view key="contentView" id="203">
-                <rect key="frame" x="0.0" y="0.0" width="265" height="74"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <button id="206">
-                        <rect key="frame" x="18" y="38" width="229" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Display properties default values" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="269">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <binding destination="210" name="value" keyPath="values.displayPropertiesDefaultValues" id="211"/>
-                        </connections>
-                    </button>
-                    <button id="208">
-                        <rect key="frame" x="18" y="18" width="229" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Colorize header file" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="270">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <binding destination="210" name="value" keyPath="values.colorizeHeaderFile" id="212"/>
-                        </connections>
-                    </button>
-                </subviews>
-            </view>
-        </window>
-        <userDefaultsController representsSharedInstance="YES" id="210" userLabel="Shared User Defaults Controller"/>
         <customObject id="400" customClass="NSFontManager"/>
     </objects>
     <resources>

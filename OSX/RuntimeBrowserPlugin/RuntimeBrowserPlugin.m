@@ -9,7 +9,9 @@
 #import "RuntimeBrowserPlugin.h"
 #import "AppController.h"
 
-@implementation RuntimeBrowserPlugin
+@implementation RuntimeBrowserPlugin {
+    NSWindow *_window;
+}
 
 + (instancetype)sharedPlugin
 {
@@ -36,9 +38,28 @@
         NSArray *arr;
         NSMenu *menu = [NSApp mainMenu];
         [[NSBundle bundleForClass:[self class]] loadNibNamed:@"RuntimeBrowserPlugin" owner:[NSApplication sharedApplication] topLevelObjects:&arr];
+        for (id obj in arr) {
+            if ([obj isKindOfClass:[NSWindow class]]) {
+                _window = obj;
+                break;
+            }
+        }
         [NSApp setMainMenu:menu];
+        
+        NSMenuItem *menuItem = [menu itemWithTitle:@"View"];
+        if (menuItem) {
+            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+            NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Runtime Browser" action:@selector(show) keyEquivalent:@""];
+            [actionMenuItem setTarget:self];
+            [[menuItem submenu] addItem:actionMenuItem];
+        }
     }
     return self;
+}
+
+- (void)show
+{
+    [_window makeKeyAndOrderFront:self];
 }
 
 @end
