@@ -53,6 +53,8 @@
             [actionMenuItem setTarget:self];
             [[menuItem submenu] addItem:actionMenuItem];
         }
+        
+        [_window close];
     }
     return self;
 }
