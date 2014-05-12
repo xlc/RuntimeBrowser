@@ -34,12 +34,9 @@
     self = [super init];
     if (self) {
         NSArray *arr;
-        id delegate = [NSApplication sharedApplication].delegate;
-        AppController *controller = [[AppController alloc] init];
-        [[NSBundle bundleForClass:[self class]] loadNibNamed:@"RuntimeBrowser" owner:controller topLevelObjects:&arr];
-        [NSApplication sharedApplication].delegate = delegate;
-        [controller.mainWindow makeMainWindow];
-        
+        NSMenu *menu = [NSApp mainMenu];
+        [[NSBundle bundleForClass:[self class]] loadNibNamed:@"RuntimeBrowserPlugin" owner:[NSApplication sharedApplication] topLevelObjects:&arr];
+        [NSApp setMainMenu:menu];
     }
     return self;
 }

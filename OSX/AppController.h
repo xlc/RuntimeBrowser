@@ -103,4 +103,6 @@ typedef enum {
 
 - (IBAction)search:(id)sender;
 
+- (BOOL)isPlugin;
+
 @end
