@@ -311,7 +311,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = B736486A0E3FCD540053523F /* Build configuration list for PBXProject "RuntimeBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -471,6 +471,7 @@
 				INFOPLIST_FILE = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.xlc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xcplugin;
 			};
@@ -507,6 +508,7 @@
 				INFOPLIST_FILE = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.xlc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xcplugin;
 			};
@@ -537,6 +539,7 @@
 				INFOPLIST_FILE = "RuntimeBrowserPlugin/RuntimeBrowserPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.xlc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xcplugin;
 			};
@@ -553,8 +556,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -599,6 +604,7 @@
 					"-licucore",
 				);
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlecode.${EXECUTABLE_NAME}";
 				PRODUCT_NAME = RuntimeBrowser;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -629,6 +635,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = "-licucore";
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlecode.${EXECUTABLE_NAME}";
 				PRODUCT_NAME = RuntimeBrowser;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -654,6 +661,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlecode.${EXECUTABLE_NAME}";
 				PRODUCT_NAME = RuntimeBrowser;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -673,6 +681,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -702,6 +712,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
