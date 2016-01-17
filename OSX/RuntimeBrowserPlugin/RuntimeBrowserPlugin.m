@@ -26,7 +26,9 @@
 
 + (void)pluginDidLoad:(NSBundle *)plugin
 {
-    [self sharedPlugin];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self sharedPlugin];
+    });
 }
 
 #pragma mark -
@@ -46,7 +48,7 @@
         }
         [NSApp setMainMenu:menu];
         
-        NSMenuItem *menuItem = [menu itemWithTitle:@"View"];
+        NSMenuItem *menuItem = [menu itemWithTitle:@"Window"];
         if (menuItem) {
             [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
             NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Runtime Browser" action:@selector(show) keyEquivalent:@""];
